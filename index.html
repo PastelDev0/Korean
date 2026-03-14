@@ -14,6 +14,14 @@
     --font: -apple-system, 'SF Pro Text', 'Helvetica Neue', sans-serif;
   }
   body { font-family: var(--font); background: #111; display: flex; justify-content: center; align-items: center; min-height: 100vh; overflow: hidden; }
+  @media (max-height: 870px), (max-width: 430px) {
+    body { background: white; align-items: flex-start; min-height: 100dvh; }
+    .iphone { width: 100vw !important; height: 100dvh !important; border-radius: 0 !important; box-shadow: none !important; }
+    .dynamic-island { display: none !important; }
+    .status-bar { height: 44px !important; padding-top: 4px !important; }
+    .home-indicator { padding-bottom: env(safe-area-inset-bottom, 0px); }
+    .input-bar { padding-bottom: max(12px, env(safe-area-inset-bottom, 12px)) !important; }
+  }
 
   #setup-screen { position: fixed; inset: 0; background: rgba(0,0,0,0.85); display: flex; align-items: center; justify-content: center; z-index: 999; backdrop-filter: blur(10px); }
   .setup-card { background: white; border-radius: 20px; padding: 28px 24px; width: 340px; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
